@@ -1,0 +1,28 @@
+.person {
+  width: 45%;
+  margin: 16px auto;
+  border: 1px solid rgb(28, 42, 172);
+  box-shadow: 0 2px 3px rgb(65, 65, 107);
+  padding: 16px;
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+.bold {
+  font-weight: bold;
+}
+.button {
+  background-color: blue;
+  color: white;
+  border: 1px solid red;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: greenyellow;
+  color: black;
+}
+.green {
+  color: green;
+}

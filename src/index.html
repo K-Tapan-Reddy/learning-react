@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disable right click on my web page</title>
+
+    <style>
+      img {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+
+  <body style="text-align: center">
+    <h1 style="color: green">GeeksForGeeks</h1>
+
+    <img
+      src="https://media.geeksforgeeks.org/wp-content/uploads/20190521140445/gfglogo2.png"
+    />
+
+    <p id="GFG_UP" style="font-size: 16px; font-weight: bold"></p>
+
+    <button onclick="gfg_Run()">Disable</button>
+
+    <p
+      id="GFG_DOWN"
+      style="color: green; font-size: 20px; font-weight: bold"
+    ></p>
+
+    <script>
+      var el_up = document.getElementById("GFG_UP");
+      var el_down = document.getElementById("GFG_DOWN");
+      el_up.innerHTML = "Click on the button to disable right click on image";
+
+      function gfg_Run() {
+        document.addEventListener(
+          "contextmenu",
+
+          function (e) {
+            if (e.target.nodeName === "IMG") {
+              e.preventDefault();
+            }
+          },
+          false
+        );
+
+        el_down.innerHTML = "Right click disabled on image";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+.BuildControls {
+  width: 100%;
+  background-color: #cf8f2e;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-shadow: 0 2px 1px #ccc;
+  /* margin: -140px auto 10px auto;
+  padding: 10px 0; */
+}
+
+.price {
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  font-size: larger;
+}
+
+.orderButton {
+  width: 20%;
+  height: 50px;
+  background-color: rgb(233, 109, 140);
+  color: white;
+  border: 1px solid blue;
+  font-size: large;
+  cursor: pointer;
+}
+
+.orderButton:hover {
+  background-color: greenyellow;
+  color: red;
+}
+
+.orderButton:disabled {
+  width: 20%;
+  height: 50px;
+  font-size: large;
+  background-color: #ccc;
+  color: rgb(138, 122, 122);
+  border: rgb(136, 99, 99);
+  cursor: not-allowed;
+}
+
+@media (max-width: 400px) {
+  .orderButton,
+  .orderButton:disabled,
+  .orderButton:hover {
+    width: 90px;
+  }
+}
+
+@media (min-width: 500px) {
+  .BuildControls {
+    margin-top: -100px;
+  }
+}
